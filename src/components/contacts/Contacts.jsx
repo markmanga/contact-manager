@@ -27,10 +27,12 @@ class Contacts extends Component {
                                 <div className="card">
                                     <div className="card-header">{name}
                                         <i className="fas fa-sort-down" onClick={() => this.setState({ showContactInfo: !this.state.showContactInfo })}></i>
+                                        <span className="icon-padding-left">
+                                            <Link to={`contact/edit/${id}`}><i className="fas fa-pencil-alt"></i></Link>
+                                        </span>
                                         <span className="icon-padding-top">
                                             <i className="fas fa-times justify-content-end" onClick={this.onClickHandler.bind(this, id, dispatch)}></i>
                                         </span>
-                                        <Link to={`contact/edit/${id}`}><i className="fas fa-pencil-alt"></i></Link>
                                     </div>
                                     {
                                         showContactInfo ? (

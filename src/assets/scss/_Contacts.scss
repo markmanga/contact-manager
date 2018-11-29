@@ -6,12 +6,16 @@
             margin: 0 1%;
             cursor: pointer;
         }
-        .icon-padding-top {
-            padding-top: .1rem;
+        .icon-padding-left {
             margin-left: auto;
+            .fa-pencil-alt {
+                font-size: .9rem;
+            }
+        }
+        .icon-padding-top {
             .fa-times {
                 color: red;
-                margin-right: 1rem;
+                margin-left: .5rem;
             }
         }
     }
