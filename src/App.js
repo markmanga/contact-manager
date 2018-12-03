@@ -1,6 +1,6 @@
 // Module imports
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 // Resource imports
 import './assets/css/common.min.css';
 // Components
