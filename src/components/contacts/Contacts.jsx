@@ -10,8 +10,12 @@ class Contacts extends Component {
     }
 
     onClickHandler = async (id, dispatch) => {
-        const res = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
-        dispatch({ type: 'DELETE_CONTACT', payload: res.id });
+        try {
+            await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+            dispatch({ type: 'DELETE_CONTACT', payload: id });
+        } catch (e) {
+            dispatch({ type: 'DELETE_CONTACT', payload: id });
+        }
     }
 
     render() {
